@@ -6,7 +6,7 @@
 
 # Syllabus
     * Basic Idea of coding standard
-        - Maintainbility
+        - Maintainability
         - Readability
         - Documentation
 
@@ -18,7 +18,7 @@
 
     * Tools
         - IDE integrated
-        - Code Quality Metircs
+        - Code Quality Metrics
 
 # Evaluation Criteria
     * Homework: 100%
