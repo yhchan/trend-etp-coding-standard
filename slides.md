@@ -113,3 +113,56 @@ Changing variable type is painful
     variables = (1, 2, 3, 4, 5)
     varaibles = CustomCollection([1, 2, 3, 4, 5])
 
+---
+
+# Meaningful Functions (1)
+- Do one thing in a function
+- Keep function **Small**
+- Use Polymorphism instead of Switch-case
+
+---
+
+# Meaningful Functions (2)
+
+    !java
+    // Bad Example
+    void printOwing() {
+        Enumeration e = _orders.elements();
+        double outstanding = 0.0;
+
+        // print banner
+        System.out.println ("**************************");
+        System.out.println ("***** Customer Owes ******");
+        System.out.println ("**************************");
+
+        // calculate outstanding
+        while (e.hasMoreElements()) {
+            Order each = (Order) e.nextElement();
+            outstanding += each.getAmount();
+        }
+
+        //print details
+        System.out.println ("name:" + _name);
+        System.out.println ("amount" + outstanding);
+    }
+
+---
+
+# Meaningful Functions (3)
+
+    !java
+    // Better Example
+    void printOwing() {
+        printBanner();
+        outstanding = getOutstanding(outstanding);
+        printDetails(outstanding);
+    }
+
+    void printBanner() {
+        // print banner
+        System.out.println ("**************************");
+        System.out.println ("***** Customer Owes ******");
+        System.out.println ("**************************");
+    }
+    ...
+
