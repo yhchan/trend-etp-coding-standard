@@ -330,11 +330,11 @@ Changing variable type is painful
     * @return      the image at the specified URL
     */
     public Image getImage(URL url, String name) {
-            try {
-                return getImage(new URL(url, name));
-            } catch (MalformedURLException e) {
-                return null;
-            }
+        try {
+            return getImage(new URL(url, name));
+        } catch (MalformedURLException e) {
+            return null;
+        }
     }
 
 ---
