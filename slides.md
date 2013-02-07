@@ -166,3 +166,129 @@ Changing variable type is painful
     }
     ...
 
+---
+
+# Output by argument
+
+## Need to consider Exception-Safety
+
+    !cpp
+    void generate_numbers_vector_bad(std::vector<int>& vec) {
+      vec.clear();
+      vec.push_back(1);
+      vec.push_back(2);  // If exception is thrown ...
+    }
+
+    void generate_numbers_vector_swap(std::vector<int>& vec) {
+      std::vector<int> result;
+      result.push_back(1);
+      result.push_back(2);
+      std::swap(vec, result);   // swap is nothrow
+    }
+
+---
+
+# Output by return value
+
+## Better Readability
+
+    !cpp
+    std::vector<int> generate_numbers_vector_return() {
+      std::vector<int> result;
+      result.push_back(1);
+      result.push_back(2);
+      return result;  // RVO or move statement
+    }
+
+
+---
+
+# Pass by value or reference (C++)
+
+## Consider Performance? Read [Want Speed? Pass by Value.][speed]
+[speed]: http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
+
+## Use pass by value in C++11
+
+    !cpp
+    // Old Style
+    std::vector<std::string>
+    sorted2(std::vector<std::string> const& names)
+    {
+        std::vector<std::string> r(names);        // and explicitly copied
+        std::sort(r);
+        return r;
+    }
+
+    // New Style
+    std::vector<std::string>
+    sorted(std::vector<std::string> names)
+    {
+        std::sort(names);
+        return ret;
+    }
+
+---
+
+# Use if wisely
+
+    !java
+    // By unsuccessful case
+    // We might introduce new error code in the future
+    if (deletePage(page) != E_PERM || deletePage(page) != E_OPEN) {
+        // do something
+    }
+
+    // By successful case
+    if (deletePage(page) == E_OK) {
+        // do something
+    }
+
+---
+
+# Use Exception over Error Code
+
+    !java
+    // Use Error Code
+    if (deletePage(page) == E_OK) {
+        if (registry.deleteReference(page.name) == E_OK) {
+            if (configKeys.deleteKey(page.name.makeKey()) == E_OK){
+                logger.log("page deleted");
+            } else {
+                logger.log("configKey not deleted");
+            }
+        } else {
+            logger.log("deleteReference from registry failed");
+        }
+    } else {
+        logger.log("delete failed");
+        return E_ERROR;
+    }
+
+---
+
+# Use Exception over Error Code
+
+    !java
+    // Exception Style
+    try {
+        deletePage(page);
+        registry.deleteReference(page.name);
+        configKeys.deleteKey(page.name.makeKey());
+    }
+    catch (SomeOtherException e) {
+        logger.log(e.getMessage());
+    }
+    catch (Exception e) {
+        logger.log(e.getMessage());
+    }
+
+---
+
+# Comment (1)
+
+## Explain Yourself in Code
+
+
+## Don't comment out your code
+- We have version control
