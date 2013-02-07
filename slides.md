@@ -288,7 +288,55 @@ Changing variable type is painful
 # Comment (1)
 
 ## Explain Yourself in Code
+    !java
+    // Check to see if the employee is eligible for full benefits
+    if (employee.flags && HOURLY_FLAG && (employee.age > 65)) {
+        // do something
+    }
 
+    if (employee.isEligibleForFullBenefits()) {
+        // do something
+    }
+
+## Express your intention
+    !python
+    def map_async(self, func, iterable, callback=None):
+        """
+        A variant of the map() method which returns a Greenlet object.
+
+        If callback is specified then it should be a callable which accepts a
+        single argument.
+        """
+        return Greenlet.spawn(self.map_cb, func, iterable, callback)
+
+---
+
+# Comment (2)
+
+## TODO / FIXME
+    !python
+    # TODO: this is supposed to iterate through all the addresses
+    # could use a global dict(hostname, iter)
+    # - fix these nasty hacks for localhost, ips, etc.
 
 ## Don't comment out your code
-- We have version control
+- Trust version control
+
+## Javadoc
+    !java
+    /*
+    * @param  url  an absolute URL giving the base location of the image
+    * @param  name the location of the image, relative to the url argument
+    * @return      the image at the specified URL
+    */
+    public Image getImage(URL url, String name) {
+            try {
+                return getImage(new URL(url, name));
+            } catch (MalformedURLException e) {
+                return null;
+            }
+    }
+
+---
+
+# Good Object-Oriented Practice
