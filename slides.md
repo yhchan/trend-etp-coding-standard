@@ -1,5 +1,16 @@
 # Coding Standard 
 
+
+---
+
+# Must Read Books
+
+## Books
+- Clean Code: A Handbook of Agile Software Craftsmanship
+- Refactoring: Improving the Design of Existing Code
+- Agile Principles, Patterns, and Practices in C#
+- Working Effectively with Legacy Code
+
 ---
 
 # Agenda
@@ -69,6 +80,10 @@
 
 ---
 
+# Formatting
+
+---
+
 # Tabs or Spaces
 
 ## Don't mix Tabs and Spaces (Editor)
@@ -84,6 +99,7 @@
 ![tab-space-mixing-2](http://i.imgur.com/7cgpJoZ.png)
 
 ---
+
 # Tabs or Spaces
 
 ## My Recommendations
@@ -93,10 +109,12 @@
     * Tab preferred code base (Linux Kernel)
 - Display tabs and space in your IDE
     * vim -> :set list
----
-# Distance Creates Beauty (1)
 
-**Have a space after IF, and before {**
+---
+
+# Distance Creates Beauty - Space (1)
+
+## Google C++ Style Guide (condition)
 
     !cpp
     if (condition) {
@@ -112,9 +130,26 @@
     if(condition){    // Doubly bad.
 
 ---
-# Distance Creates Beauty (2)
 
-PEP8 (Python)
+# Distance Creates Beauty - Space (2)
+
+## Google C++ Style Guide (loop)
+
+    !cpp
+    // Good
+    for (int i = 0; i < 5; ++i) {
+        ...
+    }
+
+    //Bad - space missing after semicolon
+    for(int i=0;i<5;++i){
+        ...
+    }
+---
+
+# Distance Creates Beauty - Space (3)
+
+## Python PEP 8
 
     !python
     if x == 4: print x, y; x, y = y, x  // YES
@@ -125,6 +160,46 @@ PEP8 (Python)
 
     spam(1)                             // YES
     spam (1)                            // NO
+
+---
+
+# Function Argument
+
+## On one line if it fits; otherwise, wrap arguments at the parenthesis.
+
+    !cpp
+    bool retval = DoSomething(argument1, argument2, argument3);
+
+    bool retval = DoSomething(argument1,
+                              argument2,
+                              argument3,
+                              argument4);
+
+---
+
+# Does too many arguments mean **bad design**?
+
+---
+
+# Long String
+
+## Respect line limit, for example: 80 characters
+
+    !python
+    my_very_big_string = """For a long time I used to go to bed early. Sometimes, \
+        when I had put out my candle, my eyes would close so quickly that I had not even \
+        time to say I’m going to seep."""
+
+    my_very_big_string = (
+        "For a long time I used to go to bed early. Sometimes, "
+        "when I had put out my candle, my eyes would close so quickly "
+        "that I had not even time to say I’m going to sleep"
+    )
+
+
+---
+
+# Naming
 
 ---
 # Meaningful Variable Naming (1)
@@ -178,6 +253,10 @@ Changing variable type is painful
     variables = [1, 2, 3, 4, 5]
     variables = (1, 2, 3, 4, 5)
     varaibles = CustomCollection([1, 2, 3, 4, 5])
+
+---
+
+# Functions
 
 ---
 
