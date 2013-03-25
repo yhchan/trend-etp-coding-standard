@@ -60,7 +60,39 @@
 - Display tabs and space in your IDE
     * vim -> :set list
 ---
+# Distance Creates Beauty (1)
 
+**Have a space after IF, and before {**
+
+    !cpp
+    if (condition) {
+      ...
+    } else if (...) {
+      ...
+    } else {
+      ...
+    }
+
+    if(condition)     // Bad - space missing after IF.
+    if (condition){   // Bad - space missing before {.
+    if(condition){    // Doubly bad.
+
+---
+# Distance Creates Beauty (2)
+
+PEP8 (Python)
+
+    !python
+    if x == 4: print x, y; x, y = y, x  // YES
+    if x==4:print x,y; x,y=y,x          // NO
+
+    dict['key'] = list[index]           // YES
+    dict ['key'] = list [index]         // NO
+
+    spam(1)                             // YES
+    spam (1)                            // NO
+
+---
 # Meaningful Variable Naming (1)
 
 ## Intention-Revealing Name
@@ -339,4 +371,7 @@ Changing variable type is painful
 
 ---
 
+# Don't Repeat Yourself (DRY)
+
+---
 # Good Object-Oriented Practice
