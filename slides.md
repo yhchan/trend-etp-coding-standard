@@ -196,7 +196,6 @@
         "that I had not even time to say I’m going to sleep"
     )
 
-
 ---
 
 # Naming
@@ -375,6 +374,100 @@ Changing variable type is painful
 
 ---
 
+# Flatten the Code
+
+---
+
+# Flattening Arrow Code
+## [Flattening Arrow Code][flatten-arrow-code]
+[flatten-arrow-code]: http://www.codinghorror.com/blog/2006/01/flattening-arrow-code.html
+
+    !java
+    if (rowCount > rowIdx) {
+        if (drc[rowIdx].Table.Columns.Contains("avalId")) {
+            do {
+                if (Attributes[attrVal.AttributeClassId] == null) {
+                    // do stuff
+                } else {
+                    if (!(Attributes[attrVal.AttributeClassId] is
+                          ArrayList)) {
+                        // do stuff
+                    } else {
+                        // do stuff
+                    }
+                }
+                rowIdx++;
+            }
+            while(rowIdx < rowCount && GetIdAsInt32(drc[rowIdx]) == Id);
+        }
+    }
+    return rowIdx;
+
+---
+
+# Replace conditions with guard clauses
+
+## Guard Clauses
+- Flattening Arrow Code
+- Focus on primary logic
+
+## Example
+    !java
+    // Not using guard clauses
+    if (SomeNecessaryCondition) {
+        // function body code
+    }
+
+    // Using guard clauses
+    if (!SomeNecessaryCondition) {
+        throw new RequiredConditionMissingException;
+    }
+    // function body code
+
+---
+
+# Use `continue`
+
+## Example
+
+    !python
+    for item in seq:
+        if someCondition:
+           # Here is our code block
+           if blah:
+               more.stuff()
+
+## Better
+    !python
+    for item in seq:
+        if not someCondition:
+           continue
+       # Now our code block is here
+       if blah:
+           more.stuff()
+
+---
+# Don't use guard clause like that
+
+## If you fail, fail fast
+- Respect maintainer and reader
+- `continue` or `return` in the center of code could be messy
+
+## Example - Don't do that ...
+    !python
+    for item in seq:
+        // 100 lines of code
+        return item
+
+        // another 100 lines of code
+        return item
+
+---
+
+# Statement
+
+---
+
 # Use if wisely
 
     !java
@@ -427,6 +520,10 @@ Changing variable type is painful
     catch (Exception e) {
         logger.log(e.getMessage());
     }
+
+---
+
+# Comment
 
 ---
 
