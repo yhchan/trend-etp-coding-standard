@@ -23,29 +23,63 @@
 
 ---
 
-#General Concept
-- Express Intentions
-- Explicit is better than implicit
-- Use technologies
-    * autocomplete
-    * refactoring tools
-    * jump to definitions
+# 安西教練，我想早點下班
+![I-wanna-go-home](http://i.imgur.com/sPTwWlg.jpg)
+
+---
+
+# The Zen of Python - PEP 20
+
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    ...
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    ...
+
+---
+
+# Keep It Simple, Stupid (KISS)
+
+## Why
+- Complexity leads to more errors and greater maintenance effort
+- more understandable, more maintainable, more flexible
+- Less is More
+
+## How
+- Objective-Oriented Analysis and Design
+- Design Patterns
+- Don't reinvent wheels
+
+---
+
+# Don't Repeat Yourself (DRY)
+
+## Why
+- Improve maintainability
+
+## How
+- Avoid Copy & Paste
+- Refactoring to general functions/classes
 
 ---
 
 # Tabs or Spaces
 
-## Rules of Thumb
-- Don't mix Tabs and Spaces (Editor)
+## Don't mix Tabs and Spaces (Editor)
 
 ![tab-space-mixing-1](http://i.imgur.com/fqlHTc1.png)
 
 ---
 
-#Tabs or Spaces
+# Tabs or Spaces
 
-## Rules of Thumb
-- Don't mix Tabs and Spaces (Diff)
+## Don't mix Tabs and Spaces (Diff)
 
 ![tab-space-mixing-2](http://i.imgur.com/7cgpJoZ.png)
 
@@ -368,10 +402,6 @@ Changing variable type is painful
             return null;
         }
     }
-
----
-
-# Don't Repeat Yourself (DRY)
 
 ---
 # Good Object-Oriented Practice
