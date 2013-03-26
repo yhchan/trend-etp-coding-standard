@@ -726,6 +726,43 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Testing and Law of Demeter
+
+## You need to fake for a fake object for another fake object ...
+
+    !java
+    class Monitor {
+        SparkPlug sparkPlug;
+        Monitor(Context context) {
+            this.sparkPlug = context.
+                getCar().getEngine().
+                getPiston().getSparkPlug();
+        }
+    }
+
+## Tell, Don't Ask
+
+    !java
+    class Monitor {
+        SparkPlug sparkPlug;
+        Monitor(SparkPlug sparkPlug) {
+            this.sparkPlug = sparkPlug;
+        }
+    }
+
+---
+
+# Principles
+
+## Class Design Principles
+- Single Responsibility Principle
+- Open Closed Principle
+- Liskov Substitution Principle
+- Interface Segregation Principle
+- Dependency Inversion Principle
+
+---
+
 # Testing
 
 ---
