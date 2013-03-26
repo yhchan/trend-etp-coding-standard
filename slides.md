@@ -2,16 +2,6 @@
 
 ---
 
-# Must Read Books
-
-## Books
-- Clean Code: A Handbook of Agile Software Craftsmanship
-- Refactoring: Improving the Design of Existing Code
-- Agile Principles, Patterns, and Practices in C#
-- Working Effectively with Legacy Code
-
----
-
 # Agenda
 - Coding Standard Introduction
 - Define Coding Standards
@@ -674,4 +664,29 @@ out to be pretty much what you expected.
     }
 
 ---
+
 # Good Object-Oriented Practice
+
+---
+
+# Testing
+
+---
+
+# Must Read Books
+
+## Books
+- Clean Code: A Handbook of Agile Software Craftsmanship
+- Refactoring: Improving the Design of Existing Code
+- Agile Principles, Patterns, and Practices in C#
+- Working Effectively with Legacy Code
+
+---
+
+# References
+
+## Websites
+- [物件導向程式的九個體操練習][object-oriented-practice]
+
+
+[object-oriented-practice]: http://ihower.tw/blog/archives/1960
