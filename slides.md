@@ -327,6 +327,58 @@ out to be pretty much what you expected.
 
 ---
 
+# Flag Arugments
+
+## Don't use flag argument
+
+# Example
+
+    !java
+    // true for what?
+    render(true);
+
+    void render(boolean isSuite) {
+        ...
+    }
+
+    // Better
+    void renderForSuite();
+    void renderForPages();
+
+---
+
+# Argument Objects
+
+## Wrap argument into object
+
+    !java
+    Circle makeCircle(double x, double y, double radius);
+    Circle makeCircle(Point center, double radius);
+
+---
+
+# Have No Side Effects
+
+## Side Effects create temporal coupling.
+- Function should only do one thing
+- Hidden Dependencies
+- Make testing harder
+
+## Example
+    !python
+    def check_passwd(username, password):
+        db_hash = User.find({'user': username}).hash
+        input_hash = calc_auth(username, password)
+
+        // Side Effect
+        if db_hash == input_hash:
+            session.init()
+            return True
+
+        return False
+
+---
+
 # Output by argument
 
 ## Need to consider Exception-Safety
