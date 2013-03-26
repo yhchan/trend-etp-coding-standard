@@ -2,15 +2,6 @@
 
 ---
 
-# Agenda
-- Coding Standard Introduction
-- Define Coding Standards
-- Well-known Coding Standards
-- Tools
-- Q & A
-
----
-
 # Why **Coding Standatd**?
 - Consistency
     * Naming
@@ -25,6 +16,11 @@
 
 # 安西教練，我想早點下班
 ![I-wanna-go-home](http://i.imgur.com/sPTwWlg.jpg)
+
+
+---
+
+# General
 
 ---
 
@@ -70,6 +66,25 @@
 ---
 
 # Formatting
+
+---
+
+# Line Length
+
+## Reference
+- [80 Character is Good][80-character-is-good]
+[80-character-is-good]: https://bitbucket.org/yhchan/ctfhc-media-pagination
+
+## Fix 80 characters!
+
+    !python
+    // Too Long
+    smatch = [to_match[:match.start()], to_match[match.start(): match.end()], to_match[match.end():]]
+
+    // Fix 80 character
+    smatch = [to_match[:match.start()],
+              to_match[match.start(): match.end()],
+              to_match[match.end():]]
 
 ---
 
