@@ -1,5 +1,4 @@
-# Coding Standard 
-
+# Coding Standard
 
 ---
 
@@ -461,6 +460,27 @@ Changing variable type is painful
 
         // another 100 lines of code
         return item
+
+---
+
+# Extract to a function
+
+## Do one thing in a function
+
+    !java
+    do
+    {
+        ValidateRowAttribute(drc[rowIdx]);
+        rowIdx++;
+    }
+    while(rowIdx < rowCount && GetIdAsInt32(drc[rowIdx]) == Id);
+
+## Useful for python list comprehension
+
+    !python
+    return ((x, complicated_transform(x))
+            for x in long_generator_function(parameter)
+            if x is not None)
 
 ---
 
