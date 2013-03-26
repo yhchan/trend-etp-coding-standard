@@ -669,7 +669,57 @@ out to be pretty much what you expected.
 
 ---
 
+# Law of Demeter
+
+Law of Demeter for functions requires that a method m of an object O
+may only invoke the methods of the following kinds of objects:
+
+1. O itself
+2. m's parameters
+3. Any objects created/instantiated within m
+4. O's direct component objects
+5. A global variable, accessible by O, in the scope of m
+
+## Example (Avoid the law)
+    !java
+    final String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();
+
+---
+
+# Tell, Don't Ask
+
+## Get the money from the customer ?
+
+    !java
+    class Clerk {
+        Store store;
+        void SellGoodsTo(Client client) {
+            money = client.GetWallet().GetMoney();
+            store.ReceiveMoney(money);
+        }
+    };
+
+## clerk only cares about money !
+
+    !java
+    class Clerk {
+        Store store;
+        void SellGoodsTo(money) {
+            store.ReceiveMoney(money);
+        }
+    };
+
+---
+
 # Testing
+
+---
+
+# Commit
+
+---
+
+# Tools
 
 ---
 
