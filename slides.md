@@ -258,11 +258,27 @@ Changing variable type is painful
 
 ---
 
+# Use Descriptive Names
+
+## Ward's principle
+- You know you are working on clean code when each routine turns
+out to be pretty much what you expected.
+
+## Descriptive Names
+- Don't be afraid to make a name long
+- A long descriptive name is better than a short enigmatic name
+
+## Examples
+- `includeSetupAndTeardownPages`
+- `isTestable`
+
+---
+
 # Meaningful Functions (1)
 - Do one thing in a function
 - Keep function **Small**
-- Use Polymorphism instead of Switch-case
-
+- Use Polymorphism instead of switch-case
+    * Using switch-case in factory is acceptable
 ---
 
 # Meaningful Functions (2)
@@ -488,19 +504,25 @@ Changing variable type is painful
 
 ---
 
-# Use if wisely
+# Negative checks or positive checks
 
     !java
-    // By unsuccessful case
+    // BAD: Nagative Check - Blasklisting
     // We might introduce new error code in the future
     if (deletePage(page) != E_PERM || deletePage(page) != E_OPEN) {
         // do something
     }
 
-    // By successful case
+    // Positive Check - Whitelisting
     if (deletePage(page) == E_OK) {
         // do something
     }
+
+    // Negative Check (Guard Clauses)
+    if (deletePage(page) != E_OK) {
+        throw new DeletePageException();
+    }
+    // do something
 
 ---
 
