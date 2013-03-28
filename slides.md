@@ -796,6 +796,20 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Write Good Unit Tests
+
+## Guideline
+- Use mock and testing framework
+- Test single concept per test
+    * If the test fail, you can find the issue in small scope of code
+- Use `setUp` and `tearDown`
+- Use correct assertion
+    * `assertEquals(a, b)` or `assertTrue(a == b)`
+- Descriptive assert message
+- Tests should not depend on other tests
+- Use isolated mock/stub object
+
+---
 
 # Commit
 
