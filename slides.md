@@ -815,6 +815,16 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# [Write Good Commit Message][write-good-commit-message]
+[write-good-commit-message]: http://blog.passionbean.com/2012/02/22/why-good-commit-message/
+- Write a single line summary
+- Use the following words, Fix, add, move, update, change, improve ...
+- Connect with issue-tracking system
+- Atomic commit
+- Express your intention
+
+---
+
 # Tools
 
 ---
