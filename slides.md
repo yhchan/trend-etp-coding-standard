@@ -767,6 +767,36 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Test Driven Development
+
+## TDD
+1. Think about the interface
+2. Write Test First
+3. See the tests fail
+4. Write the context
+5. See the tests succeed
+
+## Why?
+- All the features are testable
+- Make the design more clear
+- Enforce to isolate databases and network environment
+
+---
+
+# Guide: Writing Testable Code
+
+[code-reviewers-guide]: http://misko.hevery.com/code-reviewers-guide
+
+## [Guide: Writing Testable Code][code-reviewers-guide]
+- Static and Singleton are hard to test
+    * Also object life cycle problem
+- Digging into collaborator is hard to test (Law of Demeter)
+- Constructor does Real Work
+    * `new` in the constructor
+
+---
+
+
 # Commit
 
 ---
