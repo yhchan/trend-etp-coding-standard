@@ -829,6 +829,26 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Coding Standard Tools
+[syntastic]: https://github.com/scrooloose/syntastic
+
+## vim integrated: [Syntastic][syntastic]
+- Python Support
+    * pylint, flake8, pyflake
+- PHP Support:
+    * PHP_CodeSniffer (phpcs)
+
+## Tools:
+- c++:
+    * c++lint
+    * clang static analyzer
+    * lint
+    * cpplint
+    * cppcheck
+
+
+---
+
 # Must Read Books
 
 ## Books
