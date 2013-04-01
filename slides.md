@@ -877,6 +877,19 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Continuous Integration
+
+## Team enforcement
+- Jenkins + Flake8
+
+![jenkins-flake8](http://i.imgur.com/LPLHWsP.png)
+
+---
+
+# References
+
+---
+
 # Must Read Books
 
 ## Books
@@ -892,5 +905,8 @@ may only invoke the methods of the following kinds of objects:
 ## Websites
 - [物件導向程式的九個體操練習][object-oriented-practice]
 
-
 [object-oriented-practice]: http://ihower.tw/blog/archives/1960
+
+---
+
+# Q & A
