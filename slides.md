@@ -17,7 +17,6 @@
 # 安西教練，我想早點下班
 ![I-wanna-go-home](http://i.imgur.com/sPTwWlg.jpg)
 
-
 ---
 
 # General
@@ -838,14 +837,43 @@ may only invoke the methods of the following kinds of objects:
 - PHP Support:
     * PHP_CodeSniffer (phpcs)
 
+---
+
+# Syntastic
+
+![syntastic-screenshot](http://i.imgur.com/790bERi.png)
+
+---
+
+# Coding Standard Tools
+
+
 ## Tools:
 - c++:
     * c++lint
     * clang static analyzer
-    * lint
     * cpplint
     * cppcheck
+- python:
+    * flake8
+    * pylint
+- PHP:
+    * PHP_CodeSniffer
 
+---
+
+# Use existing conventions
+
+[android-code-style]: http://source.android.com/source/code-style.html
+- PHP
+    * PSR0, PSR1, PSR2
+    * Drupal Coding Standard
+- Python
+    * PEP8
+- JavaScript
+    * JSLint / JSHint
+- Android Project:
+    * [Android Code Style Guidelines for Contributors][android-code-style]
 
 ---
 
