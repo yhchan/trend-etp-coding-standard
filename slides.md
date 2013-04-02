@@ -1,8 +1,13 @@
-# Coding Standard
+# **Coding Standard**
 
 ---
 
-# **Coding Standatd**?
+# What is Coding Standard?
+
+---
+
+# With Coding Standard
+- Consistency
 - Extensibility
     * Easy to add new features
 - Maintainability
@@ -36,7 +41,7 @@
 
 ---
 
-# Design and Coding Principles
+# Coding principles I like most
 
 ---
 
@@ -66,9 +71,8 @@
 ## How
 - Objective-Oriented Analysis and Design
 - Design Patterns
+- Code Review Process
 - Don't reinvent wheels
-    * 3rd party libraries
-    * New Language Standards (C++11, and etc.)
 
 ---
 
@@ -356,7 +360,7 @@ out to be pretty much what you expected.
 
 # Flag Arugments
 
-## Don't use flag argument
+## Don't use flag argument (also Null argument)
 
 # Example
 
