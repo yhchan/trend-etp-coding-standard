@@ -14,12 +14,28 @@
 
 ---
 
+# Coding Convention != Clean Code
+
+## Coding Standard
+- More about Formatting
+- Decision
+    * Don't use exception (Google C++ Style Guide)
+    * Use list comprehension instead of `map`, `apply` (Python)
+
+## Clean Code
+- Concept
+- Structure
+- Object Oriented Analysis and Design
+- Readability
+
+---
+
 # 安西教練，我想早點下班
 ![I-wanna-go-home](http://i.imgur.com/sPTwWlg.jpg)
 
 ---
 
-# General
+# General Concept
 
 ---
 
@@ -798,13 +814,33 @@ may only invoke the methods of the following kinds of objects:
 # Write Good Unit Tests
 
 ## Guideline
-- Use mock and testing framework
 - Test single concept per test
     * If the test fail, you can find the issue in small scope of code
+
+## Example (Mix 2 concepts)
+    !python
+    def test_system(self):
+        // Setup
+        ...
+        task = Task()
+        result = self.system.perform_task(task)
+        self.assertTrue(result)
+
+        task = None
+        result = self.system.perform_task(task)
+        self.assertFalse(result)
+
+---
+
+# Write Good Unit Tests (cont.)
+
+- Use mock and testing framework
 - Use `setUp` and `tearDown`
 - Use correct assertion
-    * `assertEquals(a, b)` or `assertTrue(a == b)`
+    * Prefer `assertEquals(a, b)` than `assertTrue(a == b)`
+    * Consider override `__repr__`, `operator <<`, `toString()`
 - Descriptive assert message
+    * For example: `expect the object is initialized by the caller, but not ...`
 - Tests should not depend on other tests
 - Use isolated mock/stub object
 
