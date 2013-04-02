@@ -2,10 +2,7 @@
 
 ---
 
-# Why **Coding Standatd**?
-- Consistency
-    * Naming
-    * Code Structure
+# **Coding Standatd**?
 - Extensibility
     * Easy to add new features
 - Maintainability
@@ -17,8 +14,8 @@
 # Coding Convention != Clean Code
 
 ## Coding Standard
-- More about Formatting
-- Decision
+- Formatting (spacing, semicolon, indent, and etc.)
+- Coding Decision
     * Don't use exception (Google C++ Style Guide)
     * Use list comprehension instead of `map`, `apply` (Python)
 
@@ -30,12 +27,16 @@
 
 ---
 
+# The Final Goal
+
+---
+
 # 安西教練，我想早點下班
 ![I-wanna-go-home](http://i.imgur.com/sPTwWlg.jpg)
 
 ---
 
-# General Concept
+# Design and Coding Principles
 
 ---
 
@@ -66,6 +67,8 @@
 - Objective-Oriented Analysis and Design
 - Design Patterns
 - Don't reinvent wheels
+    * 3rd party libraries
+    * New Language Standards (C++11, and etc.)
 
 ---
 
@@ -77,6 +80,10 @@
 ## How
 - Avoid Copy & Paste
 - Refactoring to general functions/classes
+
+---
+
+# Coding Conventions
 
 ---
 
