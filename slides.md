@@ -142,6 +142,13 @@
 
 ---
 
+# Vim (set list)
+
+## Tabs here?
+![vim-set-list](http://i.imgur.com/37Pqpi7.png)
+
+---
+
 # Distance Creates Beauty - Space (1)
 
 ## Google C++ Style Guide (condition)
@@ -888,7 +895,7 @@ may only invoke the methods of the following kinds of objects:
 
 # Syntastic
 
-![syntastic-screenshot](http://i.imgur.com/790bERi.png)
+![syntastic-screenshot](http://i.imgur.com/mKDlPlt.png)
 
 ---
 
