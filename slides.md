@@ -292,6 +292,18 @@ Changing variable type is painful
 
 ---
 
+# Respect language differences
+
+## Python
+- Class Name: HelpFormatter
+- Function and Variable Name: `action_conflicts`
+
+## Java
+- Class Name: FileCleaner
+- Function and Variable Name: getTrackCount
+
+---
+
 # Functions
 
 ---
