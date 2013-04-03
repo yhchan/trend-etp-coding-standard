@@ -956,9 +956,17 @@ may only invoke the methods of the following kinds of objects:
 
 # References
 
-## Websites
+## Code Styles
+- [Google C++ Style Guide][google-cpp-style-guide]
+- [Google Python Style Guide][google-python-style-guide]
+- [The Hitchhiker's Guide to Python!][hitchhiker-guide-to-python]
+
+## Object Oriented
 - [物件導向程式的九個體操練習][object-oriented-practice]
 
+[google-cpp-style-guide]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
+[google-python-style-guide]: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+[hitchhiker-guide-to-python]: http://docs.python-guide.org/en/latest/
 [object-oriented-practice]: http://ihower.tw/blog/archives/1960
 
 ---
