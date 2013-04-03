@@ -145,7 +145,7 @@
 # Vim (set list)
 
 ## Tabs here?
-![vim-set-list](http://i.imgur.com/37Pqpi7.png)
+![vim-set-list](http://i.imgur.com/3CqdvAf.png)
 
 ---
 
@@ -838,12 +838,12 @@ may only invoke the methods of the following kinds of objects:
 ## Example (Mix 2 concepts)
     !python
     def test_system(self):
-        // Setup
-        ...
+        // Normal Case
         task = Task()
         result = self.system.perform_task(task)
         self.assertTrue(result)
 
+        // When task is None
         task = None
         result = self.system.perform_task(task)
         self.assertFalse(result)
