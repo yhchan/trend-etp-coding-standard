@@ -845,7 +845,7 @@ may only invoke the methods of the following kinds of objects:
 ## [Open Closed Principle][open-closed-principle]
 
 - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
-- In other words, (in an ideal world...) you should never need to change existing code or classes: All new functionality can be added by adding new subclasses or methods, or by reusing existing code through delegation.
+- All new functionality can be added by adding new subclasses or methods, or by reusing existing code through delegation.
 
 ---
 
@@ -885,7 +885,6 @@ may only invoke the methods of the following kinds of objects:
     }
 
     public class Rectangle : Shape {
-        ...
         public override double Area() {
             return Width*Height;
         }
@@ -899,6 +898,38 @@ may only invoke the methods of the following kinds of objects:
             }
             return area;
         }
+    }
+
+---
+
+# Interface Segregation Principle
+
+[isp]: http://c2.com/cgi/wiki?InterfaceSegregationPrinciple
+## [Interface Segregation Principle][isp]
+- The dependency of one class to another one should depend on the **smallest possible interface**.
+
+---
+
+# ISP Example
+
+[isp-example]: http://www.oodesign.com/interface-segregation-principle.html
+## [Interface Segregation Principle (ISP)][isp-example]
+
+    !java
+    interface IWorkable {
+        public void work();
+    }
+
+    interface IFeedable {
+        public void eat();
+    }
+
+    class Worker implements IWorkable, IFeedable {
+        ...
+    }
+
+    class Robot implements IWorkable {
+        ...
     }
 
 ---
