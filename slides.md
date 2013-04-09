@@ -1151,6 +1151,16 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Summary
+
+- Coding Convention + Clean Code = Maintainable Code
+- Refactoring
+- Testing
+- Using Tools
+- Code Review
+
+---
+
 # References
 
 ---
