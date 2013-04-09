@@ -1,4 +1,4 @@
-# **Coding Standard**
+# Coding Standard
 
 ---
 
@@ -9,10 +9,10 @@
 # With Coding Standard
 - Consistency
 - Extensibility
-    * Easy to add new features
+    * Easier to add new features
 - Maintainability
-    * Easy to understand
-    * Easy to debug
+    * Easier to understand
+    * Easier to debug
 
 ---
 
@@ -22,7 +22,7 @@
 - Formatting (spacing, semicolon, indent, and etc.)
 - Coding Decision
     * Don't use exception (Google C++ Style Guide)
-    * Use list comprehension instead of `map`, `apply` (Python)
+    * Prefer list comprehension over `map`, `apply` (Python)
 
 ## Clean Code
 - Concept
@@ -41,7 +41,7 @@
 
 ---
 
-# Coding principles I like most
+# Coding Principles I like most
 
 ---
 
@@ -65,7 +65,7 @@
 
 ## Why
 - Complexity leads to more errors and greater maintenance effort
-- more understandable, more maintainable, more flexible
+- More understandable, more maintainable, more flexible
 - Less is More
 
 ## How
@@ -97,11 +97,10 @@
 
 # Line Length
 
-## Reference
-- [80 Character is Good][80-character-is-good]
 [80-character-is-good]: https://bitbucket.org/yhchan/ctfhc-media-pagination
+## [80 Character is Good][80-character-is-good]
 
-## Fix 80 characters!
+## Comparison
 
     !python
     // Too Long
@@ -312,7 +311,7 @@ Changing variable type is painful
 
 ## Ward's principle
 - You know you are working on clean code when each routine turns
-out to be pretty much what you expected.
+out to be **pretty much what you expected**.
 
 ## Descriptive Names
 - Don't be afraid to make a name long
@@ -708,6 +707,10 @@ out to be pretty much what you expected.
 ## Don't comment out your code
 - Trust version control
 
+---
+
+# Comment (3)
+
 ## Javadoc
     !java
     /*
@@ -748,7 +751,7 @@ may only invoke the methods of the following kinds of objects:
 
 # Tell, Don't Ask
 
-## Get the money from the customer ?
+## Get the money from the customer?
 
     !java
     class Clerk {
@@ -759,7 +762,7 @@ may only invoke the methods of the following kinds of objects:
         }
     };
 
-## clerk only cares about money !
+## clerk only cares about money!
 
     !java
     class Clerk {
@@ -797,11 +800,11 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
-# Class Principles
+# Class Design Principles
 
 ---
 
-# Class Principles
+# Class Design Principles
 
 ## Class Design Principles (SOLID)
 - Single Responsibility Principle
