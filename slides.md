@@ -840,6 +840,69 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Open Closed Principle
+[open-closed-principle]: http://c2.com/cgi/wiki?OpenClosedPrinciple
+## [Open Closed Principle][open-closed-principle]
+
+- Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+- In other words, (in an ideal world...) you should never need to change existing code or classes: All new functionality can be added by adding new subclasses or methods, or by reusing existing code through delegation.
+
+---
+
+# OCP Example
+
+[ocp-example]: http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
+## [A simple example of the Open/Closed Principle][ocp-example]
+
+    !csharp
+    public class Rectangle {
+        public double Width { get; set; }
+        public double Height { get; set; }
+    }
+
+    public class AreaCalculator {
+        public double Area(object[] shapes) {
+            double area = 0;
+            foreach (var shape in shapes) {
+                if (shape is Rectangle) {
+                    Rectangle rectangle = (Rectangle) shape;
+                    area += rectangle.Width*rectangle.Height;
+                }
+                // Other shapes
+            }
+            return area;
+        }
+    }
+
+---
+
+# OCP Example
+
+## Solution
+    !csharp
+    public abstract class Shape {
+        public abstract double Area();
+    }
+
+    public class Rectangle : Shape {
+        ...
+        public override double Area() {
+            return Width*Height;
+        }
+    }
+
+    public class AreaCalculator {
+        public double Area(Shape[] shapes) {
+            double area = 0;
+            foreach (var shape in shapes) {
+                area += shape.Area();
+            }
+            return area;
+        }
+    }
+
+---
+
 # Testing
 
 ---
