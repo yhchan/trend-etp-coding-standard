@@ -934,6 +934,52 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# Dependency Inversion Principle
+
+[dip]: http://c2.com/cgi/wiki?DependencyInversionPrinciple
+## [Dependency Inversion Principle][dip]
+- High level modules should not depend upon low level modules. Both should depend upon abstractions.
+- Abstractions should not depend upon details. Details should depend upon abstractions.
+
+---
+
+# DIP Example
+
+[di-example]: http://misko.hevery.com/2008/10/21/dependency-injection-myth-reference-passing/
+## [Dependency Injection Myth: Reference Passing][di-example]
+
+## Avoid DIP: Use Singleton
+    !java
+    class UserRepository {
+      private static final BY_USERNAME_SQL = "Select ...";
+
+      User loadUser(String user) {
+        Database db = Database.getInstance();
+        return db.query(BY_USERNAME_SQL, user);
+      }
+    }
+
+---
+
+# DIP Example
+
+## Depend on Abstraction
+    !java
+    class UserRepository {
+      private static final BY_USERNAME_SQL = "Select ...";
+      private final Database db;
+
+      UserRepository(Database db) {
+        this.db = db;
+      }
+
+      User loadUser(String user) {
+        return db.query(BY_USERNAME_SQL, user);
+      }
+    }
+
+---
+
 # Testing
 
 ---
