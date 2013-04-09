@@ -803,7 +803,7 @@ may only invoke the methods of the following kinds of objects:
 
 # Class Principles
 
-## Class Design Principles
+## Class Design Principles (SOLID)
 - Single Responsibility Principle
 - Open Closed Principle
 - Liskov Substitution Principle
@@ -980,6 +980,18 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
+# SOLID recommendations
+
+[Big Design Up Front]: http://c2.com/cgi/wiki?BigDesignUpFront
+[GTAC 2010: Flexible Design? Testable Design? You Don't Have To Choose!]: http://www.youtube.com/watch?v=K3q_y8H1ZTo
+
+## My recommendations
+- Refactoring, refactoring, and refactoring
+- Never do [Big Design Up Front][Big Design Up Front]
+- TDD helps object oriented design
+- [GTAC 2010: Flexible Design? Testable Design? You Don't Have To Choose!][GTAC 2010: Flexible Design? Testable Design? You Don't Have To Choose!]
+---
+
 # Testing
 
 ---
@@ -1121,6 +1133,21 @@ may only invoke the methods of the following kinds of objects:
 - Jenkins + Flake8
 
 ![jenkins-flake8](http://i.imgur.com/LPLHWsP.png)
+
+---
+
+# Other Useful Tools
+
+[crap]: http://sebastian-bergmann.de/archives/877-CRAP-in-PHPUnit-3.5.html
+[radon]: https://pypi.python.org/pypi/radon
+[cppdepend]: http://www.cppdepend.com/
+
+## Complexity Analysis
+- [PHPUnit Change Risk Analysis and Predictions (CRAP) analysis][crap]
+- [Code Metrics in Python][radon]
+
+## Dependency Analysis
+- [CppDepend][cppdepend]
 
 ---
 
