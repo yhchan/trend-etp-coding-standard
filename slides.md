@@ -797,7 +797,11 @@ may only invoke the methods of the following kinds of objects:
 
 ---
 
-# Principles
+# Class Principles
+
+---
+
+# Class Principles
 
 ## Class Design Principles
 - Single Responsibility Principle
@@ -805,6 +809,34 @@ may only invoke the methods of the following kinds of objects:
 - Liskov Substitution Principle
 - Interface Segregation Principle
 - Dependency Inversion Principle
+
+---
+
+# Single Responsibility Principle
+
+[single-responsibility-principle]: http://c2.com/cgi/wiki?SingleResponsibilityPrinciple
+## [Single Responsibility Principle][single-responsibility-principle]
+- Each responsibility should be a separate class, because each responsibility is an axis of change.
+- A class should have one, and only one, reason to change.
+
+---
+# SRP Example
+
+[do-one-thing]: http://www.codinghorror.com/blog/2007/03/curlys-law-do-one-thing.html
+## [Curly's Law: Do One Thing][do-one-thing]
+
+## Example violates the SRP
+    !cpp
+    class Employee
+    {
+      public Money calculatePay()
+      public void save()
+      public String reportHours()
+    }
+
+1. The business rules having to do with calculating pay.
+2. The database schema.
+3. The format of the string that reports hours.
 
 ---
 
