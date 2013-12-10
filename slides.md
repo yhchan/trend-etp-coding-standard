@@ -490,6 +490,18 @@ out to be **pretty much what you expected**.
 
 ---
 
+# Clang C++ Modernizer for C++11
+## [Clang C++ Modernizer][cpp-modernizer]
+[cpp-modernizer]: http://clang.llvm.org/extra/clang-modernize.html
+- Loop Convert Transform
+- Use-Nullptr Transform
+- Use-Auto Transform
+- Add-Override Transform
+- Pass-By-Value Transform
+- Replace-AutoPtr Transform
+
+---
+
 # Flatten the Code
 
 ---
